@@ -15,6 +15,13 @@
   }
 }
 
+.nav-mobile{
+  display: none;
+}
+
+.bell{
+  display: none;
+}
 .login-logo {
   box-shadow: 2px gray;
   display: flex;
@@ -25,12 +32,18 @@
   flex: 0 0 20% !important;
 }
 
-
+.follow-leave{
+  display: none;
+}
 .community {
   font-size: 22px;
   font-weight: 700;
   line-height: 27px;
   text-align: center;
+}
+
+.three-dots{
+  padding-top: 6px;
 }
 
 .login {
@@ -374,6 +387,7 @@
 
   &-content{
     text-align: left;
+    padding-top: 0.5rem;
   }
 
   &-follow{

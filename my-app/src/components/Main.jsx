@@ -2,6 +2,7 @@ import React from "react";
 import { LeftSide } from "./LeftSide";
 import { Center } from "./Center";
 import { Right } from "./Right";
+import { NavMobile } from "./NavMobile";
 export const Main = () => {
   return (
     <main className="row">
@@ -17,7 +18,9 @@ export const Main = () => {
         <Right/>
       </section>
       </section>
-      
+      <section className="nav-mobile col-12">
+        <NavMobile/>
+      </section>
     </main>
   );
 };

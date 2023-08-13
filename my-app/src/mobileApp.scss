@@ -1,0 +1,139 @@
+@media only screen and (max-width: 600px){
+
+    .center-and-right{
+        max-width: 100% !important;
+        flex: none;
+    }
+
+    .bell{
+        display: block;
+        color: black;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .community{
+        &-wrapper{
+            display: none !important;
+            width: 100%;
+            margin: 0px !important;
+        }
+    }
+    .header-wrapper .col-4{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 5rem;
+        flex: none;
+        max-width: 100%;
+        padding-right: 0px;
+    }
+
+    .full-left-side,.full-right{
+        display: none;
+    }
+    .full-center{
+        width: fit-content;
+        padding-inline: 8px;
+    }
+    .head hr{
+        width: 100% !important;
+    }
+    .plus_join {
+        display: none;
+    }
+    .follow-leave {
+        display: block;
+        font-size: 13px;
+        color: gray;
+    }
+    .follow-leave span {
+        display: none;
+    }
+
+    .follow span{
+        padding-inline: 10px;
+    }
+
+
+   .join{
+    gap: 0.3rem;
+   }
+   .title{
+    padding-left: 1rem;
+    &-heading{
+        font-size: 16px;
+        font-weight: 700;
+    }
+    &-members{
+        font-size: 13px;
+    }
+    &-wrapper{
+        justify-content: space-between;
+    }
+
+   }
+
+   .full-center-heading{
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-block: 5px;
+   }
+
+   .header{
+    display: none;
+   }
+
+   .post{
+    padding-top: 0px;
+    height: 67vh;
+   }
+   .nav-mobile{
+    display: block;
+    &-wrapper{
+        border: 0.5px solid rgb(194, 194, 194);
+        border-radius: 25px;
+       
+    }
+    &-heading{
+        padding:8px ;
+    }
+    &-ul{
+        display: flex;
+        list-style: none;
+        padding-left: 0px;
+        justify-content: space-evenly;
+        margin-bottom: 0px;
+        padding: 5px;
+
+    }
+    &-ul li:hover{
+        color: red;
+    }
+    &-ul li div{
+        font-size: 13px;
+    }
+    &-ul li img{
+        border-radius: 50%;
+    }
+   }
+
+   .plane-btn
+   {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50%;
+    bottom: 70px;
+    -webkit-box-shadow: 5px 2px 8px 2px rgba(0,0,0,.7);
+    box-shadow: 5px 2px 8px 2px rgba(0,0,0,.7);
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    position: fixed;
+    right: -10px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+   }
+
+}
