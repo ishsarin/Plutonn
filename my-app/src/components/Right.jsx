@@ -10,7 +10,7 @@ export const Right = () => {
         <input
           type="search"
           placeholder="Search Joined Community"
-          className="right-search"
+          className="right-search" 
           size={35}
         />
         <div className="right-search-logo">

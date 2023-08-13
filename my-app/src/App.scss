@@ -2,6 +2,7 @@
   text-align: center;
   overflow-y: hidden;
   overflow-x: hidden;
+  font-family: "Roboto";
   &-header {
     background-color: #282c34;
     min-height: 100vh;
@@ -52,6 +53,8 @@
     overflow: hidden;
     white-space: nowrap;
     margin-bottom: 0px;
+    font-weight: 600;
+    line-height: 24px;
   }
 
   &-text h3 {
@@ -304,6 +307,11 @@
   }
 }
 .headings {
+
+  &{
+    padding-bottom: 10px;
+  }
+
   &-wrapper {
     justify-content: space-around;
     // width: 80%;
@@ -458,6 +466,11 @@
     padding-left: 0.5rem;
     text-align: left;
   }
+
+  &-black-search{
+    background: black;
+  }
+
 }
 
 .right-communities{
