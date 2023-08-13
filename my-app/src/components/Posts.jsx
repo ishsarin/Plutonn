@@ -87,7 +87,7 @@ export const Posts = () => {
                   </div>
                 </div>
 
-                <div onClick={handleHamburgerClick}>
+                <div onClick={handleHamburgerClick} className="three-dots">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"

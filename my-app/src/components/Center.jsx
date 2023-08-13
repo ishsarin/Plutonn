@@ -28,9 +28,10 @@ export const Center = () => {
               </div>
             </div>
             <div className="join d-flex justify-content-md-evenly align-items-center">
-            <div className='follow'><div><span style={{color:"#f45046",fontSize:"18px"}}>+</span> Join</div></div>
+            <div className='follow plus_join'><div><span style={{color:"#f45046",fontSize:"18px"}}>+</span> Join</div></div>
+            <div className='follow-leave'><div><span style={{color:"#f45046",fontSize:"18px"}}>+</span> Leave</div></div>
             
-              <div onClick={handleHamburgerClick}>
+              <div onClick={handleHamburgerClick} className="three-dots">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
