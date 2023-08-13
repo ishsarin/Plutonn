@@ -1,9 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { PiUserCircleFill } from "react-icons/pi";
-export const Navbar = () => {
+import { MdLightMode } from "react-icons/md";
+import { MdDarkMode } from "react-icons/md";
+let mode = "light"
+export const Navbar = ({app}) => {
+
+
+  const handleClickDark = ()=>{
+    // console.log("dark")
+    const light = document.querySelector(".light")
+    const dark = document.querySelector(".dark")
+    const login_text_wrapper = document.querySelector(".login-text-wrapper");  
+    light.hidden = false;
+    dark.hidden = true;
+    
+    document.body.style.background = "black"
+    document.body.style.color = "white"
+    // login_text_wrapper.style.background = `#bcbcbc`
+    mode = "dark";
+    
+  }
+  const handleClickLight = ()=>{
+    // console.log("light")
+    const light = document.querySelector(".light")
+    const dark = document.querySelector(".dark")
+    const login_text_wrapper = document.querySelector(".login-text-wrapper");  
+
+    dark.hidden = false;
+    light.hidden = true;
+    document.body.style.background = "white"
+    document.body.style.color = "black"
+    // login_text_wrapper.style.background = `white`
+    mode = "light";
+    
+  }
+
   return (
-    <header className="d-grid mt-3 align-items-center justify-content-md-center">
-      <div className="row ">
+    <header className="d-grid mt-2 align-items-center justify-content-md-center">
+      <div className="row header-wrapper">
         <div className="col-4">
           <h3 className="Plutonn-logo">
             <span>
@@ -16,7 +50,7 @@ export const Navbar = () => {
             Plutonn
           </h3>
         </div>
-        <div className="col-8 d-flex justify-content-md-around align-items-center">
+        <div className="col-8 d-flex justify-content-md-between align-items-center community-wrapper">
           <h4 className=" community">Community-Posts</h4>
           <div className="login-logo">
             <PiUserCircleFill
@@ -26,10 +60,32 @@ export const Navbar = () => {
                 borderRadius: "50%",
               }}
             />
+            <span hidden onClick={handleClickLight} className="light" name="light">
+
+            <MdLightMode
+              size={40}
+              color="white"
+              style={{
+                boxShadow: "1px 1px 12px 5px rgba(0,0,0,.15)",
+                borderRadius: "50%",
+              }}
+            />
+            </span>
+            <span onClick={handleClickDark} className="dark" name="dark">
+            <MdDarkMode
+              size={40}
+              style={{
+                boxShadow: "1px 1px 12px 5px rgba(0,0,0,.15)",
+                borderRadius: "50%",
+                
+              }}
+            />
+              </span>
           </div>
         </div>
       </div>
-      <hr style={{ width: "82%", marginTop: "5px" }} />
+      <hr style={{ width: "85%", marginTop: "5px", marginBottom: "0px" }} />
     </header>
   );
 };
+export default mode;
