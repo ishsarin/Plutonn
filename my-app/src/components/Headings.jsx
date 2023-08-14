@@ -6,16 +6,33 @@ export const Headings = () => {
     const handleClick = (e)=>{
         const posts = document.querySelector(".headings-posts")
         const announcements = document.querySelector(".headings-announcements")
-
+        const data_theme = document.querySelector("body").getAttribute('data-theme');
         // console.log(e.target.textContent)
-        if(e.target.textContent==="Posts"){
-            posts.style.color = "red"
-            announcements.style.color = "black"
+        
+    document.querySelector("body").setAttribute("data-heading",e.target.textContent)
+        
+
+            if(e.target.textContent==="Posts"){
+                posts.style.color = "red"
+                announcements.style.color = "black"
+            }
+            else if(e.target.textContent==="Announcements"){
+                announcements.style.color = "red"
+                posts.style.color = "black"
+            }
+        
+         if(data_theme==="dark"){
+            if(e.target.textContent==="Posts"){
+                posts.style.color = "red"
+                announcements.style.color = "white"
+            }
+            else if(e.target.textContent==="Announcements"){
+                announcements.style.color = "red"
+                posts.style.color = "white"
+            }
         }
-        else if(e.target.textContent==="Announcements"){
-            announcements.style.color = "red"
-            posts.style.color = "black"
-        }
+
+       
         val = e.target.textContent;
     }
 
