@@ -181,12 +181,17 @@ hr{
     padding-left: 2rem;
   }
 
+  &-content li svg{
+    color: var(--body_color) !important;
+  }
+
   &-content li {
     list-style: none;
     text-align: left;
     display: flex;
     align-items: center;
     gap: 10px;
+    color: var(--body_color);
     padding-block: 10px;
     font-size: 18px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
