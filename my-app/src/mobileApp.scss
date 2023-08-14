@@ -87,6 +87,12 @@
     padding-top: 0px;
     height: 69vh;
    }
+
+   .nav-mobile-ul li svg{
+      color: var(--body_color) !important;
+      
+   }
+
    .nav-mobile{
     display: block;
     &-wrapper{
