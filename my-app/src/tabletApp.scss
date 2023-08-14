@@ -1,0 +1,44 @@
+@media only screen and (min-width: 600px) and (max-width: 1000px ) {
+
+
+    .header-wrapper{
+        align-items: center;
+       
+
+    }
+    .community{
+        padding-left: 5rem;
+    }
+    .community-wrapper{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        justify-content: space-evenly;
+    }
+    .login-logo{
+        gap: 15px;
+    }
+    .full-left-side{
+        margin-left: 0px;
+    }
+    .full-right{
+        display: none;
+    }
+    .col-5{
+        flex:0 0 40% !important;
+    }
+    .smile-img{
+        left: 96px;
+    }
+    .center-and-right{
+        flex: 0 0 60%;
+    }
+    .full-center{
+        width: fit-content;
+    }
+    .post{
+        height: 70vh;
+    }
+    .header{
+        color: black;
+    }
+}

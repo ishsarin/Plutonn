@@ -1,5 +1,6 @@
 import './App.scss';
 import './mobileApp.scss';
+import "./tabletApp.scss"
 // import "./style.scss"
 import { Navbar } from './components/Navbar';
 
