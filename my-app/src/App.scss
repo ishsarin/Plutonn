@@ -1,18 +1,52 @@
+
+:root{
+  --body_background: white;
+  --body_color: black;
+  --body-border:rgba(0, 0, 0, 0.25);
+  --body-hover:rgba(8, 16, 16, 0.1);
+}
+
+[data-theme="dark"]{
+  --body_background: black;
+  --body_color: white;
+  --body-outer:#a7a7a7;
+  --body-border:white;
+  --body-hover:#a7a7a7;
+  --border-radius:15px;
+}
+[data-theme="light"]{
+  --body_background: white;
+  --body_color: black;
+  --body-outer:white;
+  --body-border:rgba(0, 0, 0, 0.25);
+}
+
+
+body{
+  background-color: var(--body_background);
+  color: var(--body_color);
+
+}
+
 .App {
   text-align: center;
   overflow-y: hidden;
   overflow-x: hidden;
   font-family: "Roboto";
   &-header {
-    background-color: #282c34;
+    background-color: var(--body_background);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: var(--body_color);
   }
+}
+
+hr{
+  border-top: 1px solid var(--body-border);
 }
 
 .nav-mobile{
@@ -83,6 +117,7 @@
     padding-bottom: 2rem;
     padding-inline: 32px;
     margin-inline: 20px;
+    background-color: var(--body-outer);
   }
   &-text-wrapper-dark {
     padding-top: 3.5rem !important;
@@ -328,19 +363,21 @@
   &-wrapper {
     justify-content: space-around;
     // width: 80%;
-    border-top: 1px solid rgba(0, 0, 0, 0.25);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    border-top: 1px solid var(--body-border);
+    border-bottom: 1px solid var(--body-border);
     font-size: 18px;
+    color: var(--body_color) !important;
     font-weight: 600;
   }
   &-posts,
   &-announcements {
     width: 100%;
     padding: 1rem;
+    color: var(--body_color) ;
   }
   &-posts:hover,
   &-announcements:hover {
-    background: rgba(8, 16, 16, 0.1);
+    background: var(--body-hover);
     cursor: pointer;
   }
 }
@@ -456,6 +493,8 @@
   &-search{
     padding: 5px;
     border-radius: 10px;
+    background-color: var(--body_background);
+    color: var(--body_color);
   }
 
   &-wrapper{
@@ -488,7 +527,12 @@
 }
 
 .right-communities{
-  
+  &{
+    background: var(--body-outer);
+    border-radius: var(--border-radius);
+    padding: 5px;
+    margin-top: 5px;
+  }
   &-img{
     border-radius: 50%;
     box-shadow: 1px 1px 5px 3px #d3d3d3;

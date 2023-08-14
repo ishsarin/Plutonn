@@ -2,39 +2,41 @@ import React, { useEffect, useState } from "react";
 import { PiUserCircleFill } from "react-icons/pi";
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
-let mode = "light"
-export const Navbar = ({app}) => {
-
-
-  const handleClickDark = ()=>{
+let mode = "light";
+export const Navbar = ({ app }) => {
+  const handleClickDark = () => {
     // console.log("dark")
     const light = document.querySelector(".light")
     const dark = document.querySelector(".dark")
-    const login_text_wrapper = document.querySelector(".login-text-wrapper");  
+    // const login_text_wrapper = document.querySelector(".login-text-wrapper");
     light.hidden = false;
     dark.hidden = true;
-    
-    document.body.style.background = "black"
-    document.body.style.color = "white"
-    // login_text_wrapper.style.background = `#bcbcbc`
-    mode = "dark";
-    
-  }
-  const handleClickLight = ()=>{
+    // document.body.style.background = "black"
+    // document.body.style.color = "white"
+    // // login_text_wrapper.style.background = `#bcbcbc`
+    // mode = "dark";
+
+
+    document.querySelector("body").setAttribute("data-theme","dark")
+
+
+  };
+  const handleClickLight = () => {
     // console.log("light")
     const light = document.querySelector(".light")
     const dark = document.querySelector(".dark")
-    const login_text_wrapper = document.querySelector(".login-text-wrapper");  
-
+    // const login_text_wrapper = document.querySelector(".login-text-wrapper");
     dark.hidden = false;
     light.hidden = true;
-    document.body.style.background = "white"
-    document.body.style.color = "black"
-    // login_text_wrapper.style.background = `white`
-    mode = "light";
-    
-  }
+    // document.body.style.background = "white"
+    // document.body.style.color = "black"
+    // // login_text_wrapper.style.background = `white`
+    // mode = "light";
 
+    document.querySelector("body").setAttribute("data-theme","light")
+
+  };
+  // handleClickDark();
   return (
     <header className="d-grid mt-2 align-items-center justify-content-md-center head">
       <div className="row header-wrapper">
@@ -49,9 +51,18 @@ export const Navbar = ({app}) => {
             </span>{" "}
             Plutonn
           </h3>
-          <div className="bell"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
-  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
-</svg></div>
+          <div className="bell">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              fill="currentColor"
+              class="bi bi-bell"
+              viewBox="0 0 16 16"
+            >
+              <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+            </svg>
+          </div>
         </div>
         <div className="col-8 d-flex justify-content-md-between align-items-center community-wrapper">
           <h4 className=" community">Community-Posts</h4>
@@ -63,27 +74,30 @@ export const Navbar = ({app}) => {
                 borderRadius: "50%",
               }}
             />
-            <span hidden onClick={handleClickLight} className="light" name="light">
-
-            <MdLightMode
-              size={40}
-              color="white"
-              style={{
-                boxShadow: "1px 1px 12px 5px rgba(0,0,0,.15)",
-                borderRadius: "50%",
-              }}
-            />
+            <span
+              hidden
+              onClick={handleClickLight}
+              className="light"
+              name="light"
+            >
+              <MdLightMode
+                size={40}
+                color="white"
+                style={{
+                  boxShadow: "1px 1px 12px 5px rgba(0,0,0,.15)",
+                  borderRadius: "50%",
+                }}
+              />
             </span>
             <span onClick={handleClickDark} className="dark" name="dark">
-            <MdDarkMode
-              size={40}
-              style={{
-                boxShadow: "1px 1px 12px 5px rgba(0,0,0,.15)",
-                borderRadius: "50%",
-                
-              }}
-            />
-              </span>
+              <MdDarkMode
+                size={40}
+                style={{
+                  boxShadow: "1px 1px 12px 5px rgba(0,0,0,.15)",
+                  borderRadius: "50%",
+                }}
+              />
+            </span>
           </div>
         </div>
       </div>

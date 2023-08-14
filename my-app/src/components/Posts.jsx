@@ -164,7 +164,7 @@ export const Posts = () => {
               </div>
             </div>
           </div>
-          <hr />
+          <hr  />
         </div>
       ))}
     </div>
